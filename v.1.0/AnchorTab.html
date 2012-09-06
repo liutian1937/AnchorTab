@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>AnchorTab Demo</title>
+<style>
+html,body{margin:0;padding:0;width:100%;height:100%;}
+body{background-attachment: fixed;}
+#nav{position:fixed;_position:absolute;top:0px;left:0px;background:#EE4000;width:100%;height:40px;line-height:40px;}
+#nav a{height:40px;display:inline-block;padding:0px 15px;color:#000;text-decoration:none;font-size:20px;-webkit-transition:all .5s linear;-moz-transition:all .5s linear;outline:none;}
+.selected{background:#ff0;}
+#section_wrap{width:100%;}
+ul{width:100%;margin:0;padding:0;display:block;}
+</style>
+</head>
+<body>
+<div id='nav'>
+	<a href="#home" name="home" class="selected">home</a>
+	<a href="#about" name="about">about</a>
+	<a href="#design" name="design">design</a>
+	<a href="#blog" name="blog">blog</a>
+	<a href="#links" name="links">links</a>
+</div>
+
+<div id="section_wrap">
+	<ul></ul>
+	<ul></ul>
+	<ul></ul>
+	<ul></ul>
+	<ul></ul>
+</div>
+
+<script type="text/javascript" src="AnchorTab.js"></script>
+<script>
+//basic javascript code 
+var cHei =window.innerHeight || document.body.clientHeight;
+var randColor = function(){return '#'+('00000'+(Math.random()*0x1000000<<0).toString(16)).slice(-6);}
+for(i=0;i<document.getElementsByTagName('ul').length;i++){
+	document.getElementsByTagName('ul')[i].style.height = cHei +"px";
+	document.getElementsByTagName('ul')[i].style.backgroundColor = randColor();
+}
+
+//AnchorTab basic setting
+new AnchorTab({
+	section : '#section_wrap ul',
+	nav: '#nav a',
+	follow : '#nav',
+	speed:20
+});
+</script>
+</body>
+</html>
