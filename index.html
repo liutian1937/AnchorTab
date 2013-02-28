@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Anchortab : A  javascript plugin that used for anchor shift ." />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Anchortab</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/liutian1937/AnchorTab">View on GitHub</a>
+
+          <h1 id="project_title">Anchortab</h1>
+          <h2 id="project_tagline">A  javascript plugin that used for anchor shift .</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/liutian1937/AnchorTab/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/liutian1937/AnchorTab/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <p>AnchorTab.js</p>
+
+<p>经常看到一些单页面网站用到滚动条滚动的时候，导航条的部分跟随着更换。
+于是写了一个用于实现滚动条控制锚点自动切换的插件。
+此插件适用于单页网站中。</p>
+
+<p>项目地址：<a href="http://www.niumowang.org/javascript/anchortab/">http://www.niumowang.org/javascript/anchortab/</a></p>
+
+<p>使用方法：</p>
+
+<p>new AnchorTab({
+    section : '#section_wrap ul',
+    nav: '#nav a',
+    follow : '#nav',
+    speed:30
+});</p>
+
+<p>section 为需要循环的容器。格式为 "#id tagName" 的形式（不设置默认为#section_wrap ul）
+nav 是导航条部分。格式为"#id tagName" 的形式（不设置默认为#nav a）
+follow 是针对ie6不支持fixed的处理。可以根据你的代码结构自行设置需要跟随窗口滚动的标签。不设置默认为不滚动。设置后只是针对ie6的情况进行处理。
+speed 为锚点跳转的时候滚动的速度，值越大越慢。（不设置默认为30）</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Anchortab maintained by <a href="https://github.com/liutian1937">liutian1937</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
